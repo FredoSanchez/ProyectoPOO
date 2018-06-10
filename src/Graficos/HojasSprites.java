@@ -16,24 +16,28 @@ import javax.imageio.ImageIO;
  * @author ferna
  */
 public class HojasSprites {
+
     public final int[] pixeles;
     private final int ancho;
     private final int alto;
-    
-    public HojasSprites(final String ruta, final int ancho,final int alto){
+
+    public HojasSprites(final String ruta, final int ancho, final int alto) {
         this.ancho = ancho;
         this.alto = alto;
-        
+
         pixeles = new int[ancho * alto];
-        
+
         BufferedImage imagen = null;
         try {
-            imagen.getRGB(0,0,ancho, alto, pixeles, 0, ancho);
+            imagen.getRGB(0, 0, ancho, alto, pixeles, 0, ancho);
             imagen = ImageIO.read(HojasSprites.class.getResource(ruta));
         } catch (IOException e) {
-           e.printStackTrace();
+            e.printStackTrace();
         }
-        
-        
+
+    }
+    
+    public int getAncho(){
+        return ancho;
     }
 }
