@@ -14,9 +14,10 @@ import javax.swing.JFrame;
  *
  * @author ferna
  */
-public class Juego extends Canvas{
+public class Juego extends Canvas implements Runnable{
     
     private static JFrame ventana;
+    private static Thread thread;
     
     private static final int ANCHO = 800;
     private static final int ALTO = 600;
@@ -39,6 +40,21 @@ public class Juego extends Canvas{
     
     public static void main(String[] args){
         Juego juego = new Juego();
+        juego.iniciar();
+    }
+    
+    private void iniciar(){
+        thread = new Thread(this,"Graficos");
+        thread.start();
+    }
+    
+    private void detener(){
+        
+    }
+
+    @Override
+    public void run() {
+        System.out.println("El thread inicio bien");
     }
     
     
