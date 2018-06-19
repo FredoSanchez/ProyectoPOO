@@ -14,7 +14,7 @@ import java.awt.event.KeyListener;
  */
 public class Teclado implements KeyListener {
 
-    private final static int numeroTeclas = 120;
+    private final static int numeroTeclas = 140;
     private final boolean[] teclas = new boolean[numeroTeclas];
 
     public boolean arriba;

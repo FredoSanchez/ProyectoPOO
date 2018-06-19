@@ -19,10 +19,6 @@ import javax.swing.JFrame;
  */
 public class Juego extends Canvas implements Runnable{
     
-    private static JFrame ventana;
-    private static Thread thread;
-    private static Teclado teclado;
-    
     private static final int ANCHO = 800;
     private static final int ALTO = 600;
     private static volatile boolean enFuncionamiento = false;
@@ -30,6 +26,10 @@ public class Juego extends Canvas implements Runnable{
     private static final String NOMBRE = "Inferno Dante";
     private static int aps = 0;
     private static int fps = 0;
+    
+    private static JFrame ventana;
+    private static Thread thread;
+    private static Teclado teclado;
     
     private Juego(){
         setPreferredSize(new Dimension(ANCHO,ALTO));
