@@ -9,7 +9,7 @@ package Graficos;
  *
  * @author ferna
  */
-public class Sprite {
+public final class Sprite {
     private final int lado;
     
     private int x;
@@ -29,7 +29,7 @@ public class Sprite {
         
         for(int y = 0; y < lado;y++){
             for(int x = 0; x < lado; x++){
-                pixeles[x + y *lado] =  hoja.pixeles[(x + this.x) + (y + this.y) * hoja.getAncho()];
+                pixeles[(x + y) *lado] =  hoja.pixeles[((x + this.x) + (y + this.y)) * hoja.getAncho()];
             }
         }
     }
