@@ -27,10 +27,13 @@ public class HojasSprites {
 
         pixeles = new int[ancho * alto];
 
-        BufferedImage imagen = null;
+        BufferedImage imagen;
+        
+        //Se leen datos y puede que tenga error de ruta o inexistencia
         try {
-            imagen.getRGB(0, 0, ancho, alto, pixeles, 0, ancho);
-            imagen = ImageIO.read(HojasSprites.class.getResource(ruta));
+            imagen = ImageIO.read(HojasSprites.class.getResource(ruta));    
+            //(xInicial, yInicial , ancho, alto, array, desplazamiento, tamañoScaneo)
+            imagen.getRGB(0, 0, ancho, alto, pixeles, 0, ancho);            
         } catch (IOException e) {
             e.printStackTrace();
         }
