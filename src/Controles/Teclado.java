@@ -12,9 +12,9 @@ import java.awt.event.KeyListener;
  *
  * @author ferna
  */
-public class Teclado implements KeyListener {
+public final class Teclado implements KeyListener {
 
-    private final static int numeroTeclas = 140;
+    private final static int numeroTeclas = 120;
     private final boolean[] teclas = new boolean[numeroTeclas];
 
     public boolean arriba;
@@ -30,16 +30,17 @@ public class Teclado implements KeyListener {
     }
 
     @Override
-    public void keyTyped(KeyEvent e) {
+    public void keyPressed(KeyEvent e) {
         teclas[e.getKeyCode()] = true;
     }
 
     @Override
-    public void keyPressed(KeyEvent e) {
+    public void keyReleased(KeyEvent e) {
         teclas[e.getKeyCode()] = false;
     }
-
+    
     @Override
-    public void keyReleased(KeyEvent e) {}
+    public void keyTyped(KeyEvent e) {        
+    }
 
 }
