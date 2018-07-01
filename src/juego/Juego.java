@@ -19,6 +19,8 @@ import javax.swing.JFrame;
  */
 public class Juego extends Canvas implements Runnable{
     
+     private static final long serialVersionUID = 1L;//Identificador por defecto de serie
+        
     private static final int ANCHO = 800;
     private static final int ALTO = 600;
     private static volatile boolean enFuncionamiento = false;
@@ -26,6 +28,8 @@ public class Juego extends Canvas implements Runnable{
     private static final String NOMBRE = "Inferno Dante";
     private static int aps = 0;
     private static int fps = 0;
+    
+   
     
     private static JFrame ventana;
     private static Thread thread;
@@ -64,7 +68,7 @@ public class Juego extends Canvas implements Runnable{
         enFuncionamiento = false;
         
         try {
-            thread.join();
+            thread.join();//Espera que se termine de ejecutar el Thread y no lo cierra abruptamente a diferencia de thread.stop()
         } catch (InterruptedException e) {
             e.printStackTrace();
         }   
