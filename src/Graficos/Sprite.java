@@ -18,6 +18,10 @@ public final class Sprite {
     public int[] pixeles;
     private final HojasSprites hoja;
     
+    //Coleccion de sprites
+    public static Sprite cosa = new Sprite(128, 0 , 0 , HojasSprites.prueba);
+    //Fin de la coleccion de sprites
+    
     public Sprite(final int lado, final int columna,final int fila,final HojasSprites hoja){
         this.lado = lado;
         
@@ -29,7 +33,7 @@ public final class Sprite {
         
         for(int y = 0; y < lado;y++){
             for(int x = 0; x < lado; x++){
-                pixeles[(x + y) *lado] =  hoja.pixeles[((x + this.x) + (y + this.y)) * hoja.getAncho()];
+                pixeles[x + y *lado] =  hoja.pixeles[(x + this.x) + (y + this.y) * hoja.getAncho()];
             }
         }
     }
