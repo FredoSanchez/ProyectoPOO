@@ -33,6 +33,11 @@ public class Juego extends Canvas implements Runnable{
     private static volatile boolean enFuncionamiento = false;
     
     private static final String NOMBRE = "Inferno Dante";
+    
+    private static String CONTADOR_APS="";
+    private static String CONTADOR_FPS="";
+    
+    
     private static int aps = 0;
     private static int fps = 0;
     
@@ -68,6 +73,7 @@ public class Juego extends Canvas implements Runnable{
         ventana.setIconImage(Icono.getImage());
         ventana.setLayout(new BorderLayout());
         ventana.add(this, BorderLayout.CENTER);
+        ventana.setUndecorated(true);
         ventana.pack();
         ventana.setLocationRelativeTo(null);
         ventana.setVisible(true);
@@ -115,6 +121,9 @@ public class Juego extends Canvas implements Runnable{
             x++;
         }
         
+        if(teclado.salir){
+            System.exit(0);
+        }
         aps++;
         
         
@@ -146,6 +155,8 @@ public class Juego extends Canvas implements Runnable{
         //vacia la memoria que g ocupaba
         g.setColor(Color.white);
         g.fillRect(ANCHO/2, ALTO/2, 32, 32);
+        g.drawString(CONTADOR_APS, 10, 20);
+        g.drawString(CONTADOR_FPS, 10, 35);
         g.dispose();
         
         //muestra la imagen
@@ -182,7 +193,9 @@ public class Juego extends Canvas implements Runnable{
            mostrar();
            
            if(System.nanoTime() - referenciaContador >  NS_POR_SEGUNDO){
-               ventana.setTitle(NOMBRE+ " || APS:" + aps + " || FPS: " + fps );
+              CONTADOR_APS="APS:" + aps;
+              CONTADOR_FPS="FPS:" + fps;
+              
                aps = 0;
                fps = 0;
                referenciaContador = System.nanoTime();

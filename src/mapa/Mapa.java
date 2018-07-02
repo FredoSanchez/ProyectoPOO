@@ -44,14 +44,17 @@ public abstract class Mapa {
     }
 
     public void mostrar(int compensacionX, int compensacionY, Pantalla pantalla) {
+        
+        pantalla.setDiferencia(compensacionX, compensacionY);
+        
         //oeste
         int o = compensacionX >> 5;//BitShifting en vez de división para rendimiento.
         //este
-        int e = (compensacionX + pantalla.getAncho()) >> 5;
+        int e = (compensacionX + pantalla.getAncho()+Cuadro.LADO) >> 5;
         //norte
         int n = compensacionY >> 5;
         //sur
-        int s = (compensacionY + pantalla.getAlto()) >> 5;
+        int s = (compensacionY + pantalla.getAlto()+Cuadro.LADO) >> 5;
         
         for(int y=n; y<s;y++){
             for(int x=o;x<e;x++){
@@ -61,7 +64,9 @@ public abstract class Mapa {
     }
 
     public Cuadro getCuadro(final int x, final int y) {
-        int identificador = cuadros[x + y * ancho];
+        if(x<0 || y<0 || x>= ancho || y>= alto){
+        return Cuadro.VACIO;  //dibuja cuadro vacio al salirse de la dimension de pantalla
+    }
         switch (cuadros[x + y * ancho]) {
             case 0:
                 return Cuadro.ASFALTO;
