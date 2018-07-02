@@ -22,7 +22,7 @@ public class HojasSprites {
     private final int alto;
     
     //coleccion de hojas de sprites
-    public static HojasSprites prueba = new HojasSprites("/texturas/prueba.png",1024,1024);
+    public static HojasSprites desierto = new HojasSprites("/texturas/prueba.png",1024,1024);
     //fin de la coleccion
 
     public HojasSprites(final String ruta, final int ancho, final int alto) {

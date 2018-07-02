@@ -48,7 +48,7 @@ public final class Pantalla {
                 }
                 
                 //temporal
-                pixeles[posicionX + posicionY * ancho] = Sprite.cosa.pixeles[(x & MASCARA_SPRITE) + (y & MASCARA_SPRITE) * LADO_SPRITE ];
+                pixeles[posicionX + posicionY * ancho] = Sprite.ASFALTO.pixeles[(x & MASCARA_SPRITE) + (y & MASCARA_SPRITE) * LADO_SPRITE ];
             }
         }
     }
