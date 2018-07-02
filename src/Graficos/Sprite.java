@@ -19,7 +19,7 @@ public final class Sprite {
     private final HojasSprites hoja;
     
     //Coleccion de sprites
-    public static Sprite cosa = new Sprite(128, 0 , 0 , HojasSprites.prueba);
+    public static Sprite cosa = new Sprite(128, 0 , 2 , HojasSprites.prueba);
     //Fin de la coleccion de sprites
     
     public Sprite(final int lado, final int columna,final int fila,final HojasSprites hoja){
