@@ -58,6 +58,16 @@ public final class Pantalla {
     //Fin temporal
     
     public void mostrarCuadro(int compensacionX, int compensacionY, Cuadro cuadro){
-        //for(int y=0; y < )
+        for(int y=0; y < cuadro.sprite.getLado(); y++){
+            int posicionY = y + compensacionY;
+            
+            for (int x=0; x < cuadro.sprite.getLado(); x++){
+                int posicionX = x + compensacionX;
+                if (posicionX < 0 || posicionX > ancho || posicionY < 0 || posicionY > alto){
+                    break;
+                }
+                pixeles[posicionX + posicionY * ancho] = cuadro.sprite.pixeles[x + y * cuadro.sprite.getLado()];
+            }
+        }
     }
 }
