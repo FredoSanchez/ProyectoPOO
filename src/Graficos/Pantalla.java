@@ -5,6 +5,8 @@
  */
 package Graficos;
 
+import mapa.cuadro.Cuadro;
+
 /**
  *
  * @author fredy
@@ -17,7 +19,7 @@ public final class Pantalla {
     public final int[] pixeles;
     
     //Temporal
-    private final static int LADO_SPRITE = 128;
+    private final static int LADO_SPRITE = 32;
     private final static int MASCARA_SPRITE = LADO_SPRITE - 1;
     //fin temporal
 
@@ -34,6 +36,7 @@ public final class Pantalla {
         }
     }
 
+    //Temporal
     public void mostrar(final int compensacionX, final int compensacionY) {
         for (int y = 0; y < alto; y++) {
             int posicionY = y + compensacionY;
@@ -51,5 +54,10 @@ public final class Pantalla {
                 pixeles[posicionX + posicionY * ancho] = Sprite.ASFALTO.pixeles[(x & MASCARA_SPRITE) + (y & MASCARA_SPRITE) * LADO_SPRITE ];
             }
         }
+    }
+    //Fin temporal
+    
+    public void mostrarCuadro(int compensacionX, int compensacionY, Cuadro cuadro){
+        //for(int y=0; y < )
     }
 }
