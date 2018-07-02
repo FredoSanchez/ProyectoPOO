@@ -17,6 +17,8 @@ import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import mapa.Mapa;
+import mapa.MapaGenerado;
 
 /**
  *
@@ -41,6 +43,7 @@ public class Juego extends Canvas implements Runnable{
     private static Thread thread;
     private static Teclado teclado;
     private static Pantalla pantalla;
+    private static Mapa mapa;
     
     
     private static BufferedImage imagen = new BufferedImage(ANCHO, ALTO, BufferedImage.TYPE_INT_RGB);
@@ -53,6 +56,8 @@ public class Juego extends Canvas implements Runnable{
         setPreferredSize(new Dimension(ANCHO,ALTO));
         
         pantalla = new Pantalla(ANCHO, ALTO);
+        
+        mapa= new MapaGenerado(128,128); //128 Tiles ancho por 128 tiles alto
         
         teclado = new Teclado();
         addKeyListener(teclado);
@@ -95,19 +100,19 @@ public class Juego extends Canvas implements Runnable{
         teclado.actualizar();
         
         if(teclado.arriba){
-            y++;
-        }
-        
-        if(teclado.abajo){
             y--;
         }
         
+        if(teclado.abajo){
+            y++;
+        }
+        
         if(teclado.izquierda){
-            x++;
+            x--;
         }
         
         if(teclado.derecha){
-            x--;
+            x++;
         }
         
         aps++;
@@ -124,7 +129,7 @@ public class Juego extends Canvas implements Runnable{
         }
         
         pantalla.limpiar();
-        pantalla.mostrar(x, y);
+        mapa.mostrar(x, y, pantalla);
         
         //copia el bucle for de la pantalla al bucle for del juego
         System.arraycopy(pantalla.pixeles, 0, pixeles, 0, pixeles.length);

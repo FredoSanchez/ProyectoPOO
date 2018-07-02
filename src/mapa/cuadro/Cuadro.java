@@ -19,6 +19,8 @@ public abstract class Cuadro {
     public Sprite sprite;
     
     //Colección de cuadros
+    
+    public static final Cuadro VACIO = new CuadroVacio(Sprite.VACIO);
     public static final Cuadro ASFALTO = new CuadroAsfalto(Sprite.ASFALTO);
     //Fin de la colección de cuadros
 
@@ -27,7 +29,7 @@ public abstract class Cuadro {
     }
     
     public void mostrar(int x, int y, Pantalla pantalla){
-        
+         pantalla.mostrarCuadro(x<<5, y <<5, this);
     }
     
     public boolean solido(){
