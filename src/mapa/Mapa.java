@@ -12,10 +12,10 @@ import Graficos.Pantalla;
  * @author fredy
  */
 public abstract class Mapa {
-    private int ancho;
-    private int alto;
+    protected int ancho;
+    protected int alto;
     
-    private int[] cuadros;
+    protected int[] cuadros;
 
     public Mapa(int ancho, int alto) {
         this.ancho = ancho;
@@ -30,7 +30,7 @@ public abstract class Mapa {
     }
     
 
-    private void generarMapa() {
+    protected void generarMapa() {
         
     }
 
