@@ -12,7 +12,7 @@ import Graficos.Sprite;
  *
  * @author fredy
  */
-public abstract class Cuadro {
+public class Cuadro {
     public int x;
     public int y;
     
@@ -21,8 +21,15 @@ public abstract class Cuadro {
     public static final int LADO=32;
     //Colección de cuadros
     
-    public static final Cuadro VACIO = new CuadroVacio(Sprite.VACIO);
-    public static final Cuadro ASFALTO = new CuadroAsfalto(Sprite.ASFALTO);
+    public static final Cuadro VACIO = new Cuadro(Sprite.VACIO);
+    public static final Cuadro CAVERNA = new Cuadro(Sprite.CAVERNA);
+    public static final Cuadro LAVA = new Cuadro(Sprite.LAVA);
+    public static final Cuadro CALDERO = new Cuadro(Sprite.CALDERO);
+    public static final Cuadro PIEDRA = new Cuadro(Sprite.PIEDRA);
+    
+    
+     //Faltan más Sprites..
+    
     //Fin de la colección de cuadros
 
     public Cuadro(Sprite sprite) {
