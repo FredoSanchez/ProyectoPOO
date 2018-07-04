@@ -13,8 +13,8 @@ import mapa.Mapa;
  */
 public class Ente {
 
-    private int x;
-    private int y;
+    protected int x;
+    protected int y;
 
     private boolean eliminado = false;
 
