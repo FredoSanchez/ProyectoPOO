@@ -27,11 +27,14 @@ public final class Sprite {
     public static final Sprite GRIETA = new Sprite(32, 18, 11, 0, HojasSprites.desierto);
     public static final Sprite PARED = new Sprite(32, 19, 11, 0, HojasSprites.desierto);
     public static final Sprite PUERTA1 = new Sprite(32, 4, 24, 0, HojasSprites.desierto);
-    public static final Sprite PUERTA2 = new Sprite(32, 5, 24, 0, HojasSprites.desierto);
+    public static final Sprite PUERTA1D = new Sprite(32, 4, 24, 1, HojasSprites.desierto);
+    //public static final Sprite PUERTA2 = new Sprite(32, 5, 24, 0, HojasSprites.desierto);
     public static final Sprite PUERTA3 = new Sprite(32, 4, 25, 0, HojasSprites.desierto);
-    public static final Sprite PUERTA4 = new Sprite(32, 5, 25, 0, HojasSprites.desierto);
+     public static final Sprite PUERTA3D = new Sprite(32, 4, 25, 1, HojasSprites.desierto);
+   // public static final Sprite PUERTA4 = new Sprite(32, 5, 25, 0, HojasSprites.desierto);
     public static final Sprite PUERTA5 = new Sprite(32, 4, 26, 0, HojasSprites.desierto);
-    public static final Sprite PUERTA6 = new Sprite(32, 5, 26, 0, HojasSprites.desierto);
+    public static final Sprite PUERTA5D = new Sprite(32, 4, 26, 1, HojasSprites.desierto);
+    //public static final Sprite PUERTA6 = new Sprite(32, 5, 26, 0, HojasSprites.desierto);
     public static final Sprite PISO = new Sprite(32, 12, 5, 0, HojasSprites.desierto);
 
     //Faltan más Sprites..
@@ -129,8 +132,8 @@ public final class Sprite {
     //1
     private void invertirX(int[] pixelesTemporales) {
         int i = 0;
-        for(int y = 0; y < lado; y++){
-            for(int x = lado - 1; x > -1; x--){
+        for (int y = 0; y < lado; y++) {
+            for (int x = lado - 1; x > -1; x--) {
                 pixeles[i] = pixelesTemporales[x + y * lado];
                 i++;
             }
@@ -139,9 +142,9 @@ public final class Sprite {
 
     //2
     private void invertirY(int[] pixelesTemporales) {
-         int i = 0;
-        for(int y = lado - 1; y > -1; y--){
-            for(int x = 0 ; x < lado; x++){
+        int i = 0;
+        for (int y = lado - 1; y > -1; y--) {
+            for (int x = 0; x < lado; x++) {
                 pixeles[i] = pixelesTemporales[x + y * lado];
                 i++;
             }
@@ -150,16 +153,16 @@ public final class Sprite {
 
     //3
     private void invertirXY(int[] pixelesTemporales) {
-        for(int i = 0; i < pixeles.length; i++ ){
-            pixeles[i] = pixelesTemporales[pixelesTemporales.length -1 - i];
+        for (int i = 0; i < pixeles.length; i++) {
+            pixeles[i] = pixelesTemporales[pixelesTemporales.length - 1 - i];
         }
     }
 
     //4
     private void rotar90I(int[] pixelesTemporales) {
-         int i = 0;
-        for(int x = lado -1 ; x > -1; x--){
-            for(int y = 0; y < lado; y++){
+        int i = 0;
+        for (int x = lado - 1; x > -1; x--) {
+            for (int y = 0; y < lado; y++) {
                 pixeles[i] = pixelesTemporales[x + y * lado];
                 i++;
             }
@@ -168,9 +171,9 @@ public final class Sprite {
 
     //5
     private void rotar90D(int[] pixelesTemporales) {
-         int i = 0;
-        for(int x =0 ; x < lado; x++){
-            for(int y = lado -1; y > -1; y--){
+        int i = 0;
+        for (int x = 0; x < lado; x++) {
+            for (int y = lado - 1; y > -1; y--) {
                 pixeles[i] = pixelesTemporales[x + y * lado];
                 i++;
             }
@@ -179,9 +182,9 @@ public final class Sprite {
 
     //6
     private void rotarI90InvertirY(int[] pixelesTemporales) {
-         int i = 0;
-        for(int x =0 ; x < lado; x++){
-            for(int y = 0; y < lado; y++){
+        int i = 0;
+        for (int x = 0; x < lado; x++) {
+            for (int y = 0; y < lado; y++) {
                 pixeles[i] = pixelesTemporales[x + y * lado];
                 i++;
             }
@@ -191,8 +194,8 @@ public final class Sprite {
     //7
     private void rotarD90InvertidoY(int[] pixelesTemporales) {
         int i = 0;
-        for(int x = lado -1 ; x > -1; x--){
-            for(int y = lado -1; y > -1; y--){
+        for (int x = lado - 1; x > -1; x--) {
+            for (int y = lado - 1; y > -1; y--) {
                 pixeles[i] = pixelesTemporales[x + y * lado];
                 i++;
             }

@@ -46,24 +46,24 @@ public abstract class Mapa {
     }
 
     public void mostrar(int compensacionX, int compensacionY, Pantalla pantalla) {
-        
+
         pantalla.setDiferencia(compensacionX, compensacionY);
-        
+
         //oeste
         int o = compensacionX >> 5;//BitShifting en vez de división para rendimiento.
         //este
-        int e = (compensacionX + pantalla.getAncho()+Cuadro.LADO) >> 5;
+        int e = (compensacionX + pantalla.getAncho() + Cuadro.LADO) >> 5;
         //norte
         int n = compensacionY >> 5;
         //sur
-        int s = (compensacionY + pantalla.getAlto()+Cuadro.LADO) >> 5;
-        
-        for(int y=n; y<s;y++){
-            for(int x=o;x<e;x++){
+        int s = (compensacionY + pantalla.getAlto() + Cuadro.LADO) >> 5;
+
+        for (int y = n; y < s; y++) {
+            for (int x = o; x < e; x++) {
                 //getCuadro(x,y).mostrar(x, y, pantalla); //
-                if(x < 0 || y < 0 || x >= ancho || y >= alto){
+                if (x < 0 || y < 0 || x >= ancho || y >= alto) {
                     Cuadro.VACIO.mostrar(x, y, pantalla);
-                }else{
+                } else {
                     cuadrosCatalogo[x + y * ancho].mostrar(x, y, pantalla);
                 }
             }
@@ -71,9 +71,9 @@ public abstract class Mapa {
     }
 
     public Cuadro getCuadro(final int x, final int y) {
-        if(x<0 || y<0 || x>= ancho || y>= alto){
-        return Cuadro.VACIO;  //dibuja cuadro vacio al salirse de la dimension de pantalla
-    }
+        if (x < 0 || y < 0 || x >= ancho || y >= alto) {
+            return Cuadro.VACIO;  //dibuja cuadro vacio al salirse de la dimension de pantalla
+        }
         switch (cuadros[x + y * ancho]) {
             case 0:
                 return Cuadro.CAVERNA;
@@ -94,23 +94,22 @@ public abstract class Mapa {
                 return Cuadro.PUERTA1;
 
             case 6:
-                return Cuadro.PUERTA2;
+            //return Cuadro.PUERTA2;
 
             case 7:
                 return Cuadro.PUERTA3;
 
             case 8:
-                return Cuadro.PUERTA4;
+            //return Cuadro.PUERTA4;
 
             case 9:
                 return Cuadro.PUERTA5;
-                
-                case 10:
-                return Cuadro.PUERTA6;
+
+            case 10:
+                //return Cuadro.PUERTA6;
 
             case 11:
                 return Cuadro.PISO;
-   
 
             default:
                 return Cuadro.VACIO;

@@ -29,11 +29,14 @@ public class Cuadro {
     public static final Cuadro GRIETA = new Cuadro(Sprite.GRIETA);
     public static final Cuadro PARED = new Cuadro(Sprite.PARED);
     public static final Cuadro PUERTA1 = new Cuadro(Sprite.PUERTA1);
-    public static final Cuadro PUERTA2 = new Cuadro(Sprite.PUERTA2);
+     public static final Cuadro PUERTA1D = new Cuadro(Sprite.PUERTA1D);
+   // public static final Cuadro PUERTA2 = new Cuadro(Sprite.PUERTA2);
     public static final Cuadro PUERTA3 = new Cuadro(Sprite.PUERTA3);
-    public static final Cuadro PUERTA4 = new Cuadro(Sprite.PUERTA4);
+     public static final Cuadro PUERTA3D = new Cuadro(Sprite.PUERTA3D);
+    //public static final Cuadro PUERTA4 = new Cuadro(Sprite.PUERTA4);
     public static final Cuadro PUERTA5 = new Cuadro(Sprite.PUERTA5);
-    public static final Cuadro PUERTA6 = new Cuadro(Sprite.PUERTA6);
+    public static final Cuadro PUERTA5D = new Cuadro(Sprite.PUERTA5D);
+    //public static final Cuadro PUERTA6 = new Cuadro(Sprite.PUERTA6);
     public static final Cuadro PISO = new Cuadro(Sprite.PISO);
 
     //Faltan más Sprites..
