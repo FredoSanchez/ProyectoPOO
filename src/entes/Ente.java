@@ -32,7 +32,7 @@ public class Ente {
         eliminado = true;
     }
 
-    public int obtenerPosicion() {
+    public int obtenerPosicionX() {
         return x;
     }
 
