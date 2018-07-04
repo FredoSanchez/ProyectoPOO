@@ -91,8 +91,25 @@ public class MapaCargado extends Mapa {
                     continue;
                     
                     
+                case 0xffe374ad:
+                    cuadrosCatalogo[i] = Cuadro.HOYOLAVA;
+                    continue;
+
+                case 0xffffffb4:
+                    cuadrosCatalogo[i] = Cuadro.PIEDRA;
+                    continue;
+
+                case 0xffff00ad:
+                    cuadrosCatalogo[i] = Cuadro.CAVERNALAVA;
+                    continue;
+
+                case 0xffffd6ad:
+                    cuadrosCatalogo[i] = Cuadro.LAVANEGRO;
+                    continue;
+
                 default:
                     cuadrosCatalogo[i] = Cuadro.VACIO;
+                    
             }
         }
     }

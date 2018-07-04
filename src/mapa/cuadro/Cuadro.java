@@ -40,6 +40,12 @@ public class Cuadro {
     public static final Cuadro PUERTA5D = new Cuadro(Sprite.PUERTA5D,true);
     //public static final Cuadro PUERTA6 = new Cuadro(Sprite.PUERTA6);
     public static final Cuadro PISO = new Cuadro(Sprite.PISO);
+    public static final Cuadro HOYOLAVA = new Cuadro(Sprite.HOYOLAVA);
+    public static final Cuadro PIEDRA = new Cuadro(Sprite.PIEDRA);
+    public static final Cuadro CAVERNALAVA = new Cuadro(Sprite.CAVERNALAVA);
+    public static final Cuadro LAVANEGRO = new Cuadro(Sprite.LAVANEGRO);
+    
+    
 
     //Faltan más Sprites..
     //Fin de la colección de cuadros

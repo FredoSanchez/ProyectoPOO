@@ -40,7 +40,7 @@ public final class Sprite {
     //Coleccion de sprites
     public static final Sprite VACIO = new Sprite(32, 0);
     public static final Sprite CAVERNA = new Sprite(32, 1, 8, 0, HojasSprites.desierto);
-    public static final Sprite LAVA = new Sprite(32, 17, 11, 0, HojasSprites.desierto);
+    public static final Sprite LAVA = new Sprite(32, 16, 11, 0, HojasSprites.desierto);
     public static final Sprite CALDERO = new Sprite(32, 19, 13, 0, HojasSprites.desierto);
     public static final Sprite GRIETA = new Sprite(32, 18, 11, 0, HojasSprites.desierto);
     public static final Sprite PARED = new Sprite(32, 19, 11, 0, HojasSprites.desierto);
@@ -53,7 +53,12 @@ public final class Sprite {
     public static final Sprite PUERTA5 = new Sprite(32, 4, 26, 0, HojasSprites.desierto);
     public static final Sprite PUERTA5D = new Sprite(32, 4, 26, 1, HojasSprites.desierto);
     //public static final Sprite PUERTA6 = new Sprite(32, 5, 26, 0, HojasSprites.desierto);
-    public static final Sprite PISO = new Sprite(32, 12, 5, 0, HojasSprites.desierto);
+    public static final Sprite PISO = new Sprite(32, 19, 22, 0, HojasSprites.desierto);
+    
+    public static final Sprite HOYOLAVA = new Sprite(32, 15, 6, 0,HojasSprites.desierto);
+    public static final Sprite PIEDRA = new Sprite(32, 18, 6, 0,HojasSprites.desierto);
+    public static final Sprite CAVERNALAVA = new Sprite(32, 21, 6, 0,HojasSprites.desierto);
+    public static final Sprite LAVANEGRO = new Sprite(32, 17, 11, 0,HojasSprites.desierto);
 
     //Faltan más Sprites..
     //Fin de la coleccion de sprites
