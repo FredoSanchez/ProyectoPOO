@@ -32,12 +32,20 @@ public class Ente {
         eliminado = true;
     }
 
-    public int getX() {
+    public int obtenerPosicion() {
         return x;
     }
 
-    public int getY() {
+    public void modificarPosicionX(int desplazamientoX) {
+        x += desplazamientoX;
+    }
+
+    public int obtenerPosicionY() {
         return y;
+    }
+
+    public void modificarPosicionY(int desplazamientoY) {
+        y += desplazamientoY;
     }
 
     public boolean estaEliminado() {
