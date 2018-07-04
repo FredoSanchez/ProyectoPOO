@@ -64,25 +64,25 @@ public class MapaCargado extends Mapa {
                     cuadrosCatalogo[i] = Cuadro.PUERTA1;
                     continue;
                     
-                    case 0xffbdc0a2:
+                   /* case 0xffbdc0a2:
                     cuadrosCatalogo[i] = Cuadro.PUERTA2;
-                    continue;
+                    continue;*/
                     
                     case 0xff6f878a:
                     cuadrosCatalogo[i] = Cuadro.PUERTA3;
                     continue;
                     
-                    case 0xff83797b:
+                    /*case 0xff83797b:
                     cuadrosCatalogo[i] = Cuadro.PUERTA4;
-                    continue;
+                    continue;*/
                     
                     case 0xff6e6258:
                     cuadrosCatalogo[i] = Cuadro.PUERTA5;
                     continue;
                     
-                    case 0xff6c4665:
+                    /*case 0xff6c4665:
                     cuadrosCatalogo[i] = Cuadro.PUERTA6;
-                    continue;
+                    continue;*/
                     
                     case 0xff322d16:
                     cuadrosCatalogo[i] = Cuadro.PISO;
