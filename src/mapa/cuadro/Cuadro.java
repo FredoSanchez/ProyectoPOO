@@ -26,7 +26,7 @@ public class Cuadro {
 
     public static final Cuadro VACIO = new Cuadro(Sprite.VACIO,true);
     public static final Cuadro CAVERNA = new Cuadro(Sprite.CAVERNA,true);
-    public static final Cuadro LAVA = new Cuadro(Sprite.LAVA);
+    public static final Cuadro LAVA = new Cuadro(Sprite.LAVA, true);
     public static final Cuadro CALDERO = new Cuadro(Sprite.CALDERO, true);
     public static final Cuadro GRIETA = new Cuadro(Sprite.GRIETA,true);
     public static final Cuadro PARED = new Cuadro(Sprite.PARED,true);
