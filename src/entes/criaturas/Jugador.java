@@ -9,6 +9,6 @@ package entes.criaturas;
  *
  * @author ferna
  */
-public class Jugador {
+public class Jugador extends Criatura{
     
 }

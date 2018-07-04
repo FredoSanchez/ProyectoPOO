@@ -5,10 +5,12 @@
  */
 package entes.criaturas;
 
+import entes.Ente;
+
 /**
  *
  * @author ferna
  */
-public class Criatura {
+public abstract class Criatura extends Ente {
     
 }
