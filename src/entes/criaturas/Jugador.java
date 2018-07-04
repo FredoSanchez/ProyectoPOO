@@ -25,6 +25,7 @@ public class Jugador extends Criatura {
         this.y = posicionY;
     }
 
+    @Override
     public void actualizar() {
         int desplazamientoX = 0;
         int desplazamientoY = 0;
@@ -51,6 +52,7 @@ public class Jugador extends Criatura {
 
     }
     
+    @Override
     public void mostrar(){
         
     }
