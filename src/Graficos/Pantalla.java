@@ -5,6 +5,7 @@
  */
 package Graficos;
 
+import entes.criaturas.Jugador;
 import mapa.cuadro.Cuadro;
 
 /**
@@ -52,6 +53,26 @@ public final class Pantalla {
                     posicionX=0;
                 }
                 pixeles[posicionX + posicionY * ancho] = cuadro.sprite.pixeles[x + y * cuadro.sprite.getLado()];
+            }
+        }
+    }
+    
+    public void mostrarJugador(int compensacionX, int compensacionY, Jugador jugador){
+        compensacionX-= diferenciaX;  //Desplazamiento del mapa respecto a la pantalla
+        compensacionY-= diferenciaY; 
+        
+        for(int y=0; y < jugador.getSprite().getLado(); y++){
+            int posicionY = y + compensacionY;
+            
+            for (int x=0; x < jugador.getSprite().getLado(); x++){
+                int posicionX = x + compensacionX;
+                if (posicionX < -jugador.getSprite().getLado() || posicionX >= ancho || posicionY < 0 || posicionY >= alto){
+                    break;
+                }
+                if(posicionX<0){
+                    posicionX=0;
+                }
+                pixeles[posicionX + posicionY * ancho] = jugador.getSprite().pixeles[x + y * jugador.getSprite().getLado()];
             }
         }
     }

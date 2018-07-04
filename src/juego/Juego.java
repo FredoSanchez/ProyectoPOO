@@ -7,6 +7,7 @@ package juego;
 
 import Controles.Teclado;
 import Graficos.Pantalla;
+import Graficos.Sprite;
 import entes.criaturas.Jugador;
 import java.awt.BorderLayout;
 import java.awt.Canvas;
@@ -65,7 +66,7 @@ public class Juego extends Canvas implements Runnable {
         addKeyListener(teclado);
 
         mapa = new MapaCargado("/mapas/mapa1.png");
-        jugador = new Jugador(teclado);
+        jugador = new Jugador(teclado, Sprite.ARRIBA0, 240, 225);
 
         ventana = new JFrame(NOMBRE);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -124,8 +125,9 @@ public class Juego extends Canvas implements Runnable {
 
         //pantalla.limpiar();
         // La clase Jugador se encarga de mover el mapa
-        mapa.mostrar(jugador.obtenerPosicionX(), jugador.obtenerPosicionY(), pantalla);
-
+        mapa.mostrar(jugador.obtenerPosicionX() - pantalla.getAncho()/2 + jugador.getSprite().getLado()/2, 
+                jugador.obtenerPosicionY() - pantalla.getAlto()/2 + jugador.getSprite().getLado()/2, pantalla);
+        jugador.mostrar(pantalla);
         //copia el bucle for de la pantalla al bucle for del juego
         System.arraycopy(pantalla.pixeles, 0, pixeles, 0, pixeles.length);
 
@@ -137,8 +139,7 @@ public class Juego extends Canvas implements Runnable {
         //Dibuja la imagen
         g.drawImage(imagen, 0, 0, getWidth(), getHeight(), null);
         //vacia la memoria que g ocupaba
-        g.setColor(Color.white);
-        g.fillRect(ANCHO / 2, ALTO / 2, 32, 32);
+        g.setColor(Color.red);
         g.drawString(CONTADOR_APS, 10, 20);
         g.drawString(CONTADOR_FPS, 10, 35);
         g.drawString("X:" + jugador.obtenerPosicionX(), 10, 50);

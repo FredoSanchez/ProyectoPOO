@@ -6,6 +6,8 @@
 package entes.criaturas;
 
 import Controles.Teclado;
+import Graficos.Pantalla;
+import Graficos.Sprite;
 
 /**
  *
@@ -15,12 +17,14 @@ public class Jugador extends Criatura {
 
     private Teclado teclado;
 
-    public Jugador(Teclado teclado) {
+    public Jugador(Teclado teclado, Sprite sprite) {
         this.teclado = teclado;
+        this.sprite = sprite;
     }
 
-    public Jugador(Teclado teclado, int posicionX, int posicionY) {
+    public Jugador(Teclado teclado,Sprite sprite, int posicionX, int posicionY) {
         this.teclado = teclado;
+        this.sprite = sprite;
         this.x = posicionX;
         this.y = posicionY;
     }
@@ -52,8 +56,7 @@ public class Jugador extends Criatura {
 
     }
     
-    @Override
-    public void mostrar(){
-        
+    public void mostrar(Pantalla pantalla){
+       pantalla.mostrarJugador(x, y, this);
     }
 }
