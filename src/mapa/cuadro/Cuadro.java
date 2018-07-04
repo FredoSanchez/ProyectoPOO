@@ -27,7 +27,7 @@ public class Cuadro {
     public static final Cuadro VACIO = new Cuadro(Sprite.VACIO,true);
     public static final Cuadro CAVERNA = new Cuadro(Sprite.CAVERNA,true);
     public static final Cuadro LAVA = new Cuadro(Sprite.LAVA);
-    public static final Cuadro CALDERO = new Cuadro(Sprite.CALDERO);
+    public static final Cuadro CALDERO = new Cuadro(Sprite.CALDERO, true);
     public static final Cuadro GRIETA = new Cuadro(Sprite.GRIETA,true);
     public static final Cuadro PARED = new Cuadro(Sprite.PARED,true);
     public static final Cuadro PUERTA1 = new Cuadro(Sprite.PUERTA1,true);
@@ -40,10 +40,10 @@ public class Cuadro {
     public static final Cuadro PUERTA5D = new Cuadro(Sprite.PUERTA5D,true);
     //public static final Cuadro PUERTA6 = new Cuadro(Sprite.PUERTA6);
     public static final Cuadro PISO = new Cuadro(Sprite.PISO);
-    public static final Cuadro HOYOLAVA = new Cuadro(Sprite.HOYOLAVA);
-    public static final Cuadro PIEDRA = new Cuadro(Sprite.PIEDRA);
-    public static final Cuadro CAVERNALAVA = new Cuadro(Sprite.CAVERNALAVA);
-    public static final Cuadro LAVANEGRO = new Cuadro(Sprite.LAVANEGRO);
+    public static final Cuadro HOYOLAVA = new Cuadro(Sprite.HOYOLAVA, true);
+    public static final Cuadro PIEDRA = new Cuadro(Sprite.PIEDRA, true);
+    public static final Cuadro CAVERNALAVA = new Cuadro(Sprite.CAVERNALAVA, true);
+    public static final Cuadro LAVANEGRO = new Cuadro(Sprite.LAVANEGRO, true);
     
     
 
