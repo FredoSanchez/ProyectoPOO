@@ -69,6 +69,16 @@ public abstract class Mapa {
             }
         }
     }
+    
+    public Cuadro getCuadroCatalogo(int posicion) {
+        return cuadrosCatalogo[posicion];
+    }
+
+    public int getAncho() {
+        return ancho;
+    }
+    
+    
 
     public Cuadro getCuadro(final int x, final int y) {
         if (x < 0 || y < 0 || x >= ancho || y >= alto) {

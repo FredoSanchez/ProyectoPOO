@@ -18,24 +18,26 @@ public class Cuadro {
     public int y;
 
     public Sprite sprite;
+    
+    private boolean solido;
 
     public static final int LADO = 32;
     //Colección de cuadros
 
-    public static final Cuadro VACIO = new Cuadro(Sprite.VACIO);
-    public static final Cuadro CAVERNA = new Cuadro(Sprite.CAVERNA);
+    public static final Cuadro VACIO = new Cuadro(Sprite.VACIO,true);
+    public static final Cuadro CAVERNA = new Cuadro(Sprite.CAVERNA,true);
     public static final Cuadro LAVA = new Cuadro(Sprite.LAVA);
     public static final Cuadro CALDERO = new Cuadro(Sprite.CALDERO);
-    public static final Cuadro GRIETA = new Cuadro(Sprite.GRIETA);
-    public static final Cuadro PARED = new Cuadro(Sprite.PARED);
-    public static final Cuadro PUERTA1 = new Cuadro(Sprite.PUERTA1);
-     public static final Cuadro PUERTA1D = new Cuadro(Sprite.PUERTA1D);
+    public static final Cuadro GRIETA = new Cuadro(Sprite.GRIETA,true);
+    public static final Cuadro PARED = new Cuadro(Sprite.PARED,true);
+    public static final Cuadro PUERTA1 = new Cuadro(Sprite.PUERTA1,true);
+     public static final Cuadro PUERTA1D = new Cuadro(Sprite.PUERTA1D,true);
    // public static final Cuadro PUERTA2 = new Cuadro(Sprite.PUERTA2);
-    public static final Cuadro PUERTA3 = new Cuadro(Sprite.PUERTA3);
-     public static final Cuadro PUERTA3D = new Cuadro(Sprite.PUERTA3D);
+    public static final Cuadro PUERTA3 = new Cuadro(Sprite.PUERTA3,true);
+     public static final Cuadro PUERTA3D = new Cuadro(Sprite.PUERTA3D,true);
     //public static final Cuadro PUERTA4 = new Cuadro(Sprite.PUERTA4);
-    public static final Cuadro PUERTA5 = new Cuadro(Sprite.PUERTA5);
-    public static final Cuadro PUERTA5D = new Cuadro(Sprite.PUERTA5D);
+    public static final Cuadro PUERTA5 = new Cuadro(Sprite.PUERTA5,true);
+    public static final Cuadro PUERTA5D = new Cuadro(Sprite.PUERTA5D,true);
     //public static final Cuadro PUERTA6 = new Cuadro(Sprite.PUERTA6);
     public static final Cuadro PISO = new Cuadro(Sprite.PISO);
 
@@ -43,13 +45,21 @@ public class Cuadro {
     //Fin de la colección de cuadros
     public Cuadro(Sprite sprite) {
         this.sprite = sprite;
+        solido = false;
     }
+
+    public Cuadro(Sprite sprite, boolean solido) {
+        this.sprite = sprite;
+        this.solido = solido;
+    }
+    
+    
 
     public void mostrar(int x, int y, Pantalla pantalla) {
         pantalla.mostrarCuadro(x << 5, y << 5, this);
     }
 
-    public boolean solido() {
-        return false;
+    public boolean isSolido() {
+        return solido;
     }
 }
