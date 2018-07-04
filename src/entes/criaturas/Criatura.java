@@ -49,8 +49,7 @@ public abstract class Criatura extends Ente {
             }
             if(!enColision(0, desplazamientoY)){
                 modificarPosicionY(desplazamientoY);
-            }
-            
+            }            
         }
     }
     
@@ -60,10 +59,10 @@ public abstract class Criatura extends Ente {
         int posicionX = x + desplazamientoX;
         int posicionY = y + desplazamientoY;
         
-        int margenIzquierdo = -6;
-        int margenDerecho = 18;
-        int margenSuperior = -4;
-        int margenInferior = 31;
+        int margenIzquierdo = -18;
+        int margenDerecho = 24;
+        int margenSuperior = -10;
+        int margenInferior = 30;
         
         int bordeIzquierdo = (posicionX + margenDerecho)/ sprite.getLado();
         int bordeDerecho = (posicionX + margenDerecho + margenIzquierdo)/ sprite.getLado();
