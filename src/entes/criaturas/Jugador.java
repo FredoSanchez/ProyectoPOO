@@ -51,6 +51,18 @@ public class Jugador extends Criatura {
         }
 
         if (desplazamientoX != 0 || desplazamientoY != 0) {
+            if(direccion== 'n'){
+                sprite = Sprite.ARRIBA0;
+            }
+            if(direccion== 's'){
+                sprite = Sprite.ABAJO0;
+            }
+            if(direccion== 'o'){
+                sprite = Sprite.IZQUIERDA0;
+            }
+            if(direccion== 'e'){
+                sprite = Sprite.DERECHA0;
+            }
             mover(desplazamientoX, desplazamientoY);
         }
 
