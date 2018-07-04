@@ -19,6 +19,7 @@ public class MapaGenerado extends Mapa{
         super(ancho, alto);
     }
     
+    @Override
     protected void generarMapa(){
        for(int y = 0; y < alto; y++){
            for(int x = 0; x < ancho; x++){

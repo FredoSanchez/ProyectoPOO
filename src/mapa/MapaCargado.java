@@ -24,6 +24,7 @@ public class MapaCargado extends Mapa {
         super(ruta);
     }
 
+    @Override
     protected void cargarMapa(String ruta) {
         try {
             BufferedImage imagen = ImageIO.read(MapaCargado.class.getResource(ruta));
@@ -39,6 +40,7 @@ public class MapaCargado extends Mapa {
         }
     }
     
+    @Override
     protected void generarMapa(){
         for(int i = 0; i < pixeles.length; i++){
             switch(pixeles[i]){
