@@ -42,17 +42,15 @@ public class MapaCargado extends Mapa {
     protected void generarMapa(){
         for(int i = 0; i < pixeles.length; i++){
             switch(pixeles[i]){
-                case 0xffff5442:
+                case 0xffae424a:
                     cuadrosCatalogo[i] = Cuadro.LAVA;
                     continue;
-                case 0xff5b3026:
+                case 0xff7d4d35:
                     cuadrosCatalogo[i] = Cuadro.CAVERNA;
                     continue;
-                case 0xff2e2533:
+                case 0xffaec54a:
                     cuadrosCatalogo[i] = Cuadro.CALDERO;
                     continue;
-                case 0xffb88751:
-                    cuadrosCatalogo[i] = Cuadro.PIEDRA;
                 default:
                     cuadrosCatalogo[i] = Cuadro.VACIO;
             }
