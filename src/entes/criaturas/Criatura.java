@@ -17,10 +17,12 @@ public abstract class Criatura extends Ente {
     protected char direccion = 'n';
     protected boolean enMovimiento =  false;
     
+    @Override
     public void actualizar(){
         
     }
     
+    @Override
     public void mostrar(){
         
     }
