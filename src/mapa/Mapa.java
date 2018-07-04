@@ -85,7 +85,32 @@ public abstract class Mapa {
                 return Cuadro.CALDERO;
 
             case 3:
-                return Cuadro.PIEDRA;
+                return Cuadro.GRIETA;
+
+            case 4:
+                return Cuadro.PARED;
+
+            case 5:
+                return Cuadro.PUERTA1;
+
+            case 6:
+                return Cuadro.PUERTA2;
+
+            case 7:
+                return Cuadro.PUERTA3;
+
+            case 8:
+                return Cuadro.PUERTA4;
+
+            case 9:
+                return Cuadro.PUERTA5;
+                
+                case 10:
+                return Cuadro.PUERTA6;
+
+            case 11:
+                return Cuadro.PISO;
+   
 
             default:
                 return Cuadro.VACIO;

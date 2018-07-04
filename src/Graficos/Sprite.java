@@ -24,7 +24,15 @@ public final class Sprite {
     public static final Sprite CAVERNA = new Sprite(32, 1 , 8 , HojasSprites.desierto);
     public static final Sprite LAVA = new Sprite(32, 17, 11, HojasSprites.desierto);
     public static final Sprite CALDERO = new Sprite(32, 19, 13, HojasSprites.desierto);
-    public static final Sprite PIEDRA = new Sprite(32, 16, 12, HojasSprites.desierto);
+    public static final Sprite GRIETA = new Sprite(32, 18, 11, HojasSprites.desierto);
+    public static final Sprite PARED = new Sprite(32, 19, 11, HojasSprites.desierto);
+    public static final Sprite PUERTA1 = new Sprite(32, 4, 24, HojasSprites.desierto);
+    public static final Sprite PUERTA2 = new Sprite(32, 5, 24, HojasSprites.desierto);
+    public static final Sprite PUERTA3 = new Sprite(32, 4, 25, HojasSprites.desierto);
+    public static final Sprite PUERTA4 = new Sprite(32, 5, 25, HojasSprites.desierto);
+    public static final Sprite PUERTA5 = new Sprite(32, 4, 26, HojasSprites.desierto);
+    public static final Sprite PUERTA6 = new Sprite(32, 5, 26, HojasSprites.desierto);
+    public static final Sprite PISO = new Sprite(32, 12, 5, HojasSprites.desierto);
     
     //Faltan más Sprites..
   
